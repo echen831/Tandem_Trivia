@@ -1,4 +1,63 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  min-width: 50%;
+  min-height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: plum;
+}
+
+.answer-container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 100px 100px;
+}
+
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: burlywood;
+  padding: 1px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.answer:hover {
+  background-color: orange;
+}
+
+.submit-btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: powderblue;
+}
+
+#selected {
+  background-color: palegreen;
+}
+
+#hide, .hide {
+  display: none;
+}
