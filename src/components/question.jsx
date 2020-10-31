@@ -8,36 +8,36 @@ export const Question = ({ question, score, handleSubmit }) => {
     const [ currAns, setCurrAns ] = useState('');
     const [ submitted, setSubmitted ] = useState(false);
 
-    const test1 = useRef();
-    const test2 = useRef();
-    const test3 = useRef();
-    const test4 = useRef();
+    const answer1 = useRef();
+    const answer2 = useRef();
+    const answer3 = useRef();
+    const answer4 = useRef();
 
-    const test = [test1, test2, test3, test4]
+    const refs = [answer1, answer2, answer3, answer4]
 
     const submit = () => {
         if (currAns.trim() === '') return;
 
-        if (test1.current.innerText === correctAns) {
-            test1.current.style.backgroundColor = 'green';
+        if (answer1.current.innerText === correctAns) {
+            answer1.current.style.backgroundColor = 'green';
         } else {
-            test1.current.style.opacity = 0.5;
+            answer1.current.style.opacity = 0.5;
         }
-        if (test2.current.innerText === correctAns) {
-            test2.current.style.backgroundColor = 'green';
+        if (answer2.current.innerText === correctAns) {
+            answer2.current.style.backgroundColor = 'green';
         } else {
-            test2.current.style.opacity = 0.5;
+            answer2.current.style.opacity = 0.5;
         }
-        if (test3.current.innerText === correctAns) {
-            test3.current.style.backgroundColor = 'green';
+        if (answer3.current.innerText === correctAns) {
+            answer3.current.style.backgroundColor = 'green';
         } else {
-            test3.current.style.opacity = 0.5;
+            answer3.current.style.opacity = 0.5;
         }
 
-        if (test4.current.innerText === correctAns) {
-            test4.current.style.backgroundColor = 'green';
+        if (answer4.current.innerText === correctAns) {
+            answer4.current.style.backgroundColor = 'green';
         } else {
-            test4.current.style.opacity = 0.5;
+            answer4.current.style.opacity = 0.5;
         }
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 1500);
@@ -51,7 +51,7 @@ export const Question = ({ question, score, handleSubmit }) => {
                         id={idx+1 === currAnsIdx ? 'selected' : ''}
                         className='answer'
                         onClick={()=>{setCurrAnsIdx(idx+1); setCurrAns(answer)}}
-                        ref={test[idx]}
+                        ref={refs[idx]}
                     >
                         {answer}
                     </div>

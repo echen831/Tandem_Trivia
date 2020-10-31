@@ -56,8 +56,62 @@ button {
   background-color: burlywood;
   padding: 1px;
   margin: 10px;
-  box-shadow: 0 0 7px;
+  box-shadow: 0 0 10px grey;
   cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn ease-in-out 3s;
+  -webkit-animation: fadeIn ease-in-out 3s;
+  -moz-animation: fadeIn ease-in-out 3s;
+  -o-animation: fadeIn ease-in-out 3s;
+  -ms-animation: fadeIn ease-in-out 3s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 .answer:hover {
@@ -72,7 +126,7 @@ button {
   padding: 5px;
   margin-left: 10px;
   cursor: pointer;
-  box-shadow: 0 0 7px;
+  box-shadow: 0 0 7px grey;
 }
 
 .submit-btn:hover {
@@ -86,7 +140,7 @@ button {
   width: fit-content;
   padding: 5px;
   margin-left: 10px;
-  box-shadow: 0 0 7px;
+  box-shadow: 0 0 7px grey;
 }
 
 #selected {

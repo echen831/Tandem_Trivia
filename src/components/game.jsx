@@ -26,7 +26,7 @@ export const Game = () => {
         } else if (score >= 80) {
             return "You are amazing!"
         } else if (score >= 60) {
-            return "A couple hicups, but still honorable score!"
+            return "A couple hicups, but still an honorable score!"
         } else if (score >= 40) {
             return "Maybe try a little harder next time?"
         } else if (score >= 20) {
@@ -42,7 +42,7 @@ export const Game = () => {
             <div>
                 { questions.map((question, idx) => (
                     <div id={currQuestIdx !== idx ? 'hide' : ''}
-                         className='questions-container'>
+                         className='questions-container fade-in'>
                         <h2>Question { idx + 1 }: {question.question}</h2>
                         <Question key={idx}
                                   score={score}
@@ -51,7 +51,7 @@ export const Game = () => {
                     </div>
                 ))}
             </div>
-            <div id={currQuestIdx === 10 ? '' : 'hide'}>
+            <div className='fade-in' id={currQuestIdx === 10 ? '' : 'hide'}>
                 <p>Your Score is: {score}</p>
                 <p>{endMessage(score)}</p>
             </div>
