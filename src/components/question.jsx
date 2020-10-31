@@ -20,24 +20,35 @@ export const Question = ({ question, score, handleSubmit }) => {
 
         if (answer1.current.innerText === correctAns) {
             answer1.current.style.backgroundColor = 'green';
+        } else if (answer1.current.innerText === currAns && answer1.current.innerText !== correctAns) {
+            answer1.current.style.opacity = 0.5;
         } else {
+            answer1.current.style.backgroundColor = 'red';
             answer1.current.style.opacity = 0.5;
         }
         if (answer2.current.innerText === correctAns) {
             answer2.current.style.backgroundColor = 'green';
+        } else if (answer2.current.innerText === currAns && answer2.current.innerText !== correctAns) {
+            answer2.current.style.opacity = 0.5;
         } else {
+            answer2.current.style.backgroundColor = 'red';
             answer2.current.style.opacity = 0.5;
         }
         if (answer3.current.innerText === correctAns) {
             answer3.current.style.backgroundColor = 'green';
-        } else {
+        } else if (answer3.current.innerText === currAns && answer3.current.innerText !== correctAns) {
             answer3.current.style.opacity = 0.5;
+        } else {
+            answer3.current.style.backgroundColor = 'red';
+            answer3.current.style.opacity = 0.5;   
         }
-
         if (answer4.current.innerText === correctAns) {
             answer4.current.style.backgroundColor = 'green';
-        } else {
+        } else if (answer4.current.innerText === currAns && answer4.current.innerText !== correctAns) {
             answer4.current.style.opacity = 0.5;
+        } else {
+            answer4.current.style.backgroundColor = 'red';
+            answer4.current.style.opacity = 0.5; 
         }
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 1500);
