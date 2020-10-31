@@ -21,26 +21,26 @@ export const Question = ({ question, score, handleSubmit }) => {
         if (test1.current.innerText === correctAns) {
             test1.current.style.backgroundColor = 'green';
         } else {
-            test1.current.style.opacity = 0;
+            test1.current.style.opacity = 0.5;
         }
         if (test2.current.innerText === correctAns) {
             test2.current.style.backgroundColor = 'green';
         } else {
-            test2.current.style.opacity = 0;
+            test2.current.style.opacity = 0.5;
         }
         if (test3.current.innerText === correctAns) {
             test3.current.style.backgroundColor = 'green';
         } else {
-            test3.current.style.opacity = 0;
+            test3.current.style.opacity = 0.5;
         }
 
         if (test4.current.innerText === correctAns) {
             test4.current.style.backgroundColor = 'green';
         } else {
-            test4.current.style.opacity = 0;
+            test4.current.style.opacity = 0.5;
         }
         setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 3000);
+        setTimeout(() => setSubmitted(false), 1500);
     }
 
     return (
@@ -61,7 +61,9 @@ export const Question = ({ question, score, handleSubmit }) => {
             <p id={!submitted ? '' : 'hide'} 
                className='submit-btn'
                 onClick={() => {handleSubmit(correctAns, currAns); submit()}}>Submit</p>
-            <p id={submitted ? '' : 'hide'}>Current Score: {score}</p>
+            <p id={submitted ? '' : 'hide'}
+               className='score'
+                >Current Score: {score}</p>
         </div>
     )
 }

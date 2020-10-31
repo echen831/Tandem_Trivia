@@ -1,17 +1,22 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: fantasy;
+  background-image: url(https://vips.org/wp-content/uploads/2018/09/question-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 button {
   cursor: pointer;
 }
 
+
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -19,16 +24,26 @@ button {
   min-width: 50%;
   min-height: 50%;
   display: flex;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: plum;
+  border-radius: 5px;
+  box-shadow: 0 0 7px;
 }
 
 .answer-container {
   display: grid;
   grid-template-columns: 200px 200px;
   grid-template-rows: 100px 100px;
+}
+
+.questions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .answer {
@@ -41,6 +56,7 @@ button {
   background-color: burlywood;
   padding: 1px;
   margin: 10px;
+  box-shadow: 0 0 7px;
   cursor: pointer;
 }
 
@@ -52,6 +68,25 @@ button {
   border: 1px solid black;
   border-radius: 5px;
   background-color: powderblue;
+  width: fit-content;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 7px;
+}
+
+.submit-btn:hover {
+  background-color: rgb(52, 231, 255);
+}
+
+.score {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(176, 230, 203);
+  width: fit-content;
+  padding: 5px;
+  margin-left: 10px;
+  box-shadow: 0 0 7px;
 }
 
 #selected {

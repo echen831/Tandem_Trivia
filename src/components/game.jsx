@@ -16,7 +16,7 @@ export const Game = () => {
             setScore(score + 10);
         }
 
-        setTimeout(() => setCurrQuestIdx(currQuestIdx + 1), 3000)
+        setTimeout(() => setCurrQuestIdx(currQuestIdx + 1), 1500)
     }
 
     const endMessage = (score) => {
@@ -39,11 +39,11 @@ export const Game = () => {
 
     return (
         <div className='game-container'>
-            <span>Hello {name}</span>
             <div>
                 { questions.map((question, idx) => (
-                    <div id={currQuestIdx !== idx ? 'hide' : ''}>
-                        <span>Question { idx + 1 }: {question.question}</span>
+                    <div id={currQuestIdx !== idx ? 'hide' : ''}
+                         className='questions-container'>
+                        <h2>Question { idx + 1 }: {question.question}</h2>
                         <Question key={idx}
                                   score={score}
                                   question={question}
