@@ -24,7 +24,7 @@ export const Game = () => {
         if (score === 100) {
             return "You have a perfect score!"
         } else if (score >= 80) {
-            return "You are amazing!"
+            return "What an amazing score!"
         } else if (score >= 60) {
             return "A couple hicups, but still an honorable score!"
         } else if (score >= 40) {
@@ -55,11 +55,20 @@ export const Game = () => {
                     </div>
                 ))}
             </div>
-            <div className='fade-in' id={currQuestIdx === 10 ? '' : 'hide'}>
-                <h2>Thank you for playing!</h2>
-                <p>Your Score is: {score}</p>
-                <p>{endMessage(score)}</p>
-                <p className='submit-btn' onClick={reload}>Play Again</p>
+            <div className='fade-in end-game' id={currQuestIdx === 10 ? '' : 'hide'}>
+                <div className='end-container'>
+                    <h2>Thank you for playing!</h2>
+                    <p>Your Score is: {score}</p>
+                    <p>{endMessage(score)}</p>
+                    <p className='submit-btn' onClick={reload}>Play Again</p>
+                </div>
+                <div className='end-img-container'>
+                    <img src='https://i.pinimg.com/originals/e5/94/e7/e594e7a30ba52cae164bf95aa6a8651b.gif' alt=""/>
+                </div>
+                <div className='splash-footer'>
+                    <p>Created by: Eric Chen</p>
+                    <p>Please check out my portfolio <a href="https://echen831.github.io/Eric-Chen/" target='_blank'>here!</a></p>
+                </div>
             </div>
         </div>
     )
