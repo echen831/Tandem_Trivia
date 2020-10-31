@@ -7,17 +7,10 @@ body {
   background-size: cover;
 }
 
-
-
 p {
   margin: 0;
   padding: 0;
 }
-
-button {
-  cursor: pointer;
-}
-
 
 .App {
   display: flex;
@@ -43,7 +36,7 @@ button {
 .splash {
   position: relative;
   width: 50%;
-  height: 60%;
+  height: 70%;
   background-color: white;
   padding: 10px;
   border-radius: 5px;
@@ -56,6 +49,20 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.image-container {
+  display: flex;
+  width: 100%;
+}
+
+.splash img {
+  width: 100px;
+  height: 70px;
+  border-radius: 5px;
+  box-shadow: 0 0 7px;
+  margin: 10px;
+
 }
 
 .splash-footer {
