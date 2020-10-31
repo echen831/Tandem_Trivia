@@ -16,7 +16,7 @@ export const Game = () => {
             setScore(score + 10);
         }
 
-        setTimeout(() => setCurrQuestIdx(currQuestIdx + 1), 1500)
+        setTimeout(() => setCurrQuestIdx(currQuestIdx + 1), 3000)
     }
 
     const endMessage = (score) => {
@@ -36,15 +36,19 @@ export const Game = () => {
         } 
     }
 
+    const reload = () => {
+        window.location.reload();
+        return false;
+    }
+
 
     return (
         <div className='game-container'>
             <div>
                 { questions.map((question, idx) => (
-                    <div id={currQuestIdx !== idx ? 'hide' : ''}
-                         className='questions-container fade-in'>
-                        <h2>Question { idx + 1 }: {question.question}</h2>
+                    <div id={currQuestIdx !== idx ? 'hide' : ''}>
                         <Question key={idx}
+                                  questionIdx={idx}
                                   score={score}
                                   question={question}
                                   handleSubmit={handleSubmit}/>
@@ -52,8 +56,10 @@ export const Game = () => {
                 ))}
             </div>
             <div className='fade-in' id={currQuestIdx === 10 ? '' : 'hide'}>
+                <h2>Thank you for playing!</h2>
                 <p>Your Score is: {score}</p>
                 <p>{endMessage(score)}</p>
+                <p className='submit-btn' onClick={reload}>Play Again</p>
             </div>
         </div>
     )

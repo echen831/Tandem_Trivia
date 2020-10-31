@@ -7,6 +7,11 @@ body {
   background-size: cover;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 button {
   cursor: pointer;
 }
@@ -21,8 +26,8 @@ button {
 }
 
 .game-container {
-  min-width: 50%;
-  min-height: 50%;
+  width: 75%;
+  height: 60%;
   display: flex;
   padding: 10px;
   justify-content: center;
@@ -60,12 +65,13 @@ button {
   cursor: pointer;
 }
 
+
 .fade-in {
-  animation: fadeIn ease-in-out 3s;
-  -webkit-animation: fadeIn ease-in-out 3s;
-  -moz-animation: fadeIn ease-in-out 3s;
-  -o-animation: fadeIn ease-in-out 3s;
-  -ms-animation: fadeIn ease-in-out 3s;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
 }
 
 
@@ -114,17 +120,73 @@ button {
   }
 }
 
+.fade-out {
+  animation: fadeOut ease 2s;
+  -webkit-animation: fadeOut ease 2s;
+  -moz-animation: fadeOut ease 2s;
+  -o-animation: fadeOut ease 2s;
+  -ms-animation: fadeOut ease 2s;
+  animation-delay: 1s;
+}
+
+
+@keyframes fadeOut{
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
 .answer:hover {
   background-color: orange;
 }
 
 .submit-btn {
+  height: 20px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: powderblue;
   width: fit-content;
   padding: 5px;
-  margin-left: 10px;
+  margin: 10px;
   cursor: pointer;
   box-shadow: 0 0 7px grey;
 }
@@ -134,12 +196,13 @@ button {
 }
 
 .score {
+  height: 20px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: rgb(176, 230, 203);
   width: fit-content;
   padding: 5px;
-  margin-left: 10px;
+  margin: 10px;
   box-shadow: 0 0 7px grey;
 }
 

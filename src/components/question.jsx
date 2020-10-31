@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import * as Util from '../util';
 
-export const Question = ({ question, score, handleSubmit }) => {
+export const Question = ({ question, questionIdx, score, handleSubmit }) => {
     const [ answers, setAnswers ] = useState(Util.shuffle([...question.incorrect, question.correct]));
     const [ currAnsIdx, setCurrAnsIdx ] = useState(0);
     const [ correctAns, setCorrectAns ] = useState(question.correct);
@@ -51,11 +51,12 @@ export const Question = ({ question, score, handleSubmit }) => {
             answer4.current.style.opacity = 0.5; 
         }
         setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 1500);
+        setTimeout(() => setSubmitted(false), 3000);
     }
 
     return (
-        <div className='question-container'>
+        <div className={ !submitted ? 'questions-container fade-in' : 'questions-container fade-out'}>
+            <h2>Question {questionIdx + 1}: {question.question}</h2>
             <div className={'answer-container'}>
                 {answers.map((answer, idx) => (
                     <div
@@ -70,11 +71,11 @@ export const Question = ({ question, score, handleSubmit }) => {
 
             </div>
             <p id={!submitted ? '' : 'hide'} 
-               className='submit-btn'
-                onClick={() => {handleSubmit(correctAns, currAns); submit()}}>Submit</p>
+                className='submit-btn'
+                    onClick={() => {handleSubmit(correctAns, currAns); submit()}}>Submit</p>
             <p id={submitted ? '' : 'hide'}
-               className='score'
-                >Current Score: {score}</p>
+                className='score'
+                    >Current Score: {score}</p>
         </div>
     )
 }
