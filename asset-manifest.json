@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/Tandem_Trivia/static/css/main.ae2369ff.chunk.css",
-    "main.js": "/Tandem_Trivia/static/js/main.7105654f.chunk.js",
-    "main.js.map": "/Tandem_Trivia/static/js/main.7105654f.chunk.js.map",
+    "main.css": "/Tandem_Trivia/static/css/main.e147e8a6.chunk.css",
+    "main.js": "/Tandem_Trivia/static/js/main.16515f0d.chunk.js",
+    "main.js.map": "/Tandem_Trivia/static/js/main.16515f0d.chunk.js.map",
     "runtime-main.js": "/Tandem_Trivia/static/js/runtime-main.ade39437.js",
     "runtime-main.js.map": "/Tandem_Trivia/static/js/runtime-main.ade39437.js.map",
     "static/js/2.72df7fde.chunk.js": "/Tandem_Trivia/static/js/2.72df7fde.chunk.js",
     "static/js/2.72df7fde.chunk.js.map": "/Tandem_Trivia/static/js/2.72df7fde.chunk.js.map",
     "index.html": "/Tandem_Trivia/index.html",
-    "static/css/main.ae2369ff.chunk.css.map": "/Tandem_Trivia/static/css/main.ae2369ff.chunk.css.map",
-    "static/js/2.72df7fde.chunk.js.LICENSE.txt": "/Tandem_Trivia/static/js/2.72df7fde.chunk.js.LICENSE.txt"
+    "static/css/main.e147e8a6.chunk.css.map": "/Tandem_Trivia/static/css/main.e147e8a6.chunk.css.map",
+    "static/js/2.72df7fde.chunk.js.LICENSE.txt": "/Tandem_Trivia/static/js/2.72df7fde.chunk.js.LICENSE.txt",
+    "static/media/intro.c087cafa.gif": "/Tandem_Trivia/static/media/intro.c087cafa.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.ade39437.js",
     "static/js/2.72df7fde.chunk.js",
-    "static/css/main.ae2369ff.chunk.css",
-    "static/js/main.7105654f.chunk.js"
+    "static/css/main.e147e8a6.chunk.css",
+    "static/js/main.16515f0d.chunk.js"
   ]
 }
