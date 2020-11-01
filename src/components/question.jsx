@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import * as Util from '../util';
 
-export const Question = ({ question, questionIdx, score, handleSubmit }) => {
-    const [ answers, setAnswers ] = useState(Util.shuffle([...question.incorrect, question.correct]));
+export const Question = ({ question, questionIdx, score, handleSubmit, ans }) => {
+    const [ answers, setAnswers ] = useState(ans);
     const [ currAnsIdx, setCurrAnsIdx ] = useState(0);
     const [ correctAns, setCorrectAns ] = useState(question.correct);
     const [ currAns, setCurrAns ] = useState('');

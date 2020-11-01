@@ -7,7 +7,6 @@ export const Game = () => {
     const [ questions, setQuestions ] = useState(Util.shuffle(QUESTIONS).slice(0,10));
     const [ currQuestIdx, setCurrQuestIdx ] = useState(0);
     const [ score, setScore ] = useState(0);
-    const [ name, setName ] = useState('Eric');
 
     const handleSubmit = (correctAns, submitAns) => {
         if (submitAns.trim().length === 0) return;
@@ -36,6 +35,11 @@ export const Game = () => {
         } 
     }
 
+    const test = () => {
+        setQuestions(Util.shuffle(QUESTIONS.slice(0,10)));
+        setCurrQuestIdx(0);
+    }
+
     const reload = () => {
         window.location.reload();
         return false;
@@ -49,6 +53,7 @@ export const Game = () => {
                     <div id={currQuestIdx !== idx ? 'hide' : ''}>
                         <Question key={idx}
                                   questionIdx={idx}
+                                  ans={Util.shuffle([...question.incorrect, question.correct])}
                                   score={score}
                                   question={question}
                                   handleSubmit={handleSubmit}/>
@@ -60,7 +65,7 @@ export const Game = () => {
                     <h2>Thank you for playing!</h2>
                     <p>Your Score is: {score}</p>
                     <p>{endMessage(score)}</p>
-                    <p className='submit-btn' onClick={reload}>Play Again</p>
+                    <p className='submit-btn' onClick={test}>Play Again</p>
                 </div>
                 <div className='end-img-container'>
                     <img src='https://i.pinimg.com/originals/e5/94/e7/e594e7a30ba52cae164bf95aa6a8651b.gif' alt=""/>
