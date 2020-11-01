@@ -1,10 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Footer } from './footer'; 
 import Intro from '../intro.gif';
 
+const INSTRUCTIONS = [
+    "You will get 10 random multiple choice trivia questions.",
+    "Select the best answer out of 4 choices.",
+    "Press submit when you are ready.",
+    "You will see the correct answer after you submit.",
+    "See how many can you answer correctly!"
+]
 
 export const Splash = () => {
 
     const [ show, setShow ] = useState(true);
+    const [ currIdx, setCurrIdx ] = useState(0); 
+
+    useEffect( () => {
+        setTimeout(scroll, 2500);
+    })
+
+    const scroll = () => {
+        if (currIdx === 4) {
+            setCurrIdx(0);
+        } else {
+            setCurrIdx(currIdx + 1)
+        }
+    }
 
     return (
         <div className={ show ? 'splash-container' : 'hide'}>
@@ -19,11 +40,9 @@ export const Splash = () => {
                     <div className='instructions'>
                         <h3>Instructions: </h3>
                         <ul>
-                            <p>{"1) You will get 10 random multiple choice trivia questions."}</p>
-                            <p>{"2) Select the best answer out of 4 choices."}</p>
-                            <p>{"3) Press submit when you are ready."}</p>
-                            <p>{"4) You will see the correct answer after you submit."}</p>
-                            <p>{"5) See how many can you answer correctly!"}</p>
+                            { INSTRUCTIONS.map((instruction, idx) => (
+                                <p id={currIdx === idx ? 'current' : '' }>{`${idx+1}) ${instruction}`}</p>
+                            ))}
                         </ul>
                         <p className='submit-btn' onClick={() => setShow(false)}>Play Now!</p>
                     </div>
@@ -31,14 +50,7 @@ export const Splash = () => {
                         <img src={Intro} alt=""/>
                     </div>
                 </div>
-                <div className='splash-footer'>
-                        <p>Created by: Eric Chen</p>
-                        <div className='footer-links'>
-                            <a href="https://github.com/echen831" target='_blank'>Github</a>
-                            <a href="https://www.linkedin.com/in/eric-chen-782b951a9/" target='_blank'>LinkedIn</a>
-                            <a href="https://echen831.github.io/Eric-Chen/" target='_blank'>Portfolio</a>
-                        </div>
-                </div>
+                <Footer />
             </div>
 
         </div>

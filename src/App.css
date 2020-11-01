@@ -7,10 +7,12 @@ body {
   background-size: cover;
 }
 
-p {
+h2, h3, p {
+
   margin: 0;
   padding: 0;
 }
+
 
 .App {
   display: flex;
@@ -161,11 +163,11 @@ p {
 
 
 .fade-in {
-  animation: fadeIn ease 3s;
-  -webkit-animation: fadeIn ease 3s;
-  -moz-animation: fadeIn ease 3s;
-  -o-animation: fadeIn ease 3s;
-  -ms-animation: fadeIn ease 3s;
+  animation: fadeIn ease 0.6s;
+  -webkit-animation: fadeIn ease 0.6s;
+  -moz-animation: fadeIn ease 0.6s;
+  -o-animation: fadeIn ease 0.6s;
+  -ms-animation: fadeIn ease 0.6s;
 }
 
 
@@ -215,11 +217,11 @@ p {
 }
 
 .fade-out {
-  animation: fadeOut ease 3s;
-  -webkit-animation: fadeOut ease 3s;
-  -moz-animation: fadeOut ease 3s;
-  -o-animation: fadeOut ease 3s;
-  -ms-animation: fadeOut ease 3s;
+  animation: fadeOut ease 0.6s;
+  -webkit-animation: fadeOut ease 0.6s;
+  -moz-animation: fadeOut ease 0.6s;
+  -o-animation: fadeOut ease 0.6s;
+  -ms-animation: fadeOut ease 0.6s;
   animation-delay: 1s;
 }
 
@@ -329,4 +331,8 @@ p {
 
 #hide, .hide {
   display: none;
+}
+
+#current {
+  color: green;
 }

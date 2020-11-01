@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import QUESTIONS from '../Apprentice_TandemFor400_Data.json';
 import * as Util from '../util';
-import { Question } from '../components/question'
+import { Question } from '../components/question';
+import { Footer } from './footer';
 
 export const Game = () => {
     const [ questions, setQuestions ] = useState(Util.shuffle(QUESTIONS).slice(0,10));
@@ -15,7 +16,7 @@ export const Game = () => {
             setScore(score + 10);
         }
 
-        setTimeout(() => setCurrQuestIdx(currQuestIdx + 1), 3000)
+        setTimeout(() => setCurrQuestIdx(currQuestIdx + 1), 1000)
     }
 
     const endMessage = (score) => {
@@ -55,10 +56,7 @@ export const Game = () => {
                     </div>
                 ))}
             </div>
-            <div className='splash-footer'>
-                <p>Created by: Eric Chen</p>
-                <p>Please check out my portfolio <a href="https://echen831.github.io/Eric-Chen/" target='_blank'>here!</a></p>
-            </div>
+            <Footer/>
             <div className='fade-in end-game' id={currQuestIdx === 10 ? '' : 'hide'}>
                 <div className='end-container'>
                     <h2>Thank you for playing!</h2>

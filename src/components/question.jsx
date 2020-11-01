@@ -56,7 +56,10 @@ export const Question = ({ question, questionIdx, score, handleSubmit, ans }) =>
 
     return (
         <div className={ !submitted ? 'questions-container fade-in' : 'questions-container fade-out'}>
-            <h2>Question {questionIdx + 1}: {question.question}</h2>
+            <div>
+                <h2>Question {questionIdx + 1}:</h2>
+                <h3>{question.question}</h3>
+            </div>
             <div className={'answer-container'}>
                 {answers.map((answer, idx) => (
                     <div
