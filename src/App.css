@@ -35,9 +35,9 @@ p {
 
 .splash {
   position: relative;
-  width: 50%;
-  height: 70%;
-  background-color: white;
+  width: 60%;
+  height: 65%;
+  background-color: rgb(255, 240, 199);
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px grey;
@@ -51,14 +51,32 @@ p {
   justify-content: center;
 }
 
+.instruction-container {
+  display: flex;
+}
+
+.instructions {
+  width: 60%;
+  padding: 10px;
+}
+
+.intro {
+  width: 40%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 .image-container {
   display: flex;
   width: 100%;
 }
 
 .splash img {
-  width: 100px;
-  height: 70px;
+  width: 100%;
+  height: 75%;
   border-radius: 5px;
   box-shadow: 0 0 7px;
   margin: 10px;
@@ -72,6 +90,10 @@ p {
   bottom: 0;
   display: inline-flex;
   justify-content: space-between;
+}
+
+.footer-links a {
+  margin-left: 10px;
 }
 
 .close-btn-container {
