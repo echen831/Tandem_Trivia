@@ -35,11 +35,6 @@ export const Game = () => {
         } 
     }
 
-    const test = () => {
-        setQuestions(Util.shuffle(QUESTIONS.slice(0,10)));
-        setCurrQuestIdx(0);
-    }
-
     const reload = () => {
         window.location.reload();
         return false;
@@ -60,19 +55,19 @@ export const Game = () => {
                     </div>
                 ))}
             </div>
+            <div className='splash-footer'>
+                <p>Created by: Eric Chen</p>
+                <p>Please check out my portfolio <a href="https://echen831.github.io/Eric-Chen/" target='_blank'>here!</a></p>
+            </div>
             <div className='fade-in end-game' id={currQuestIdx === 10 ? '' : 'hide'}>
                 <div className='end-container'>
                     <h2>Thank you for playing!</h2>
                     <p>Your Score is: {score}</p>
                     <p>{endMessage(score)}</p>
-                    <p className='submit-btn' onClick={test}>Play Again</p>
+                    <p className='submit-btn' onClick={reload}>Play Again</p>
                 </div>
                 <div className='end-img-container'>
                     <img src='https://i.pinimg.com/originals/e5/94/e7/e594e7a30ba52cae164bf95aa6a8651b.gif' alt=""/>
-                </div>
-                <div className='splash-footer'>
-                    <p>Created by: Eric Chen</p>
-                    <p>Please check out my portfolio <a href="https://echen831.github.io/Eric-Chen/" target='_blank'>here!</a></p>
                 </div>
             </div>
         </div>

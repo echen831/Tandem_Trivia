@@ -71,7 +71,7 @@ p {
   left: 1;
   bottom: 0;
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .close-btn-container {
@@ -97,7 +97,8 @@ p {
 /**********/
 
 .game-container {
-  width: 70%;
+  position: relative;
+  width: 60%;
   height: 60%;
   display: flex;
   padding: 10px;
