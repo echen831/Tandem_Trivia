@@ -4,7 +4,7 @@ Tandem Trivia is an online trivia game for you to play when you want to take a b
 You get 10 trivia questions.  See how many you can answer!
 
 
-### [Live](https://echen831.github.io/Tandem_Trivia/).
+### Please check it out [here](https://echen831.github.io/Tandem_Trivia/).
 
 <img src='public/assets/pic_1.png' width='600' height='375' >
 
